@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RaMaDan | Embedded Systems, Robotics &amp; Energy Engineering</title>
+  <meta name="description" content="Engineering portfolio of RaMaDan — Electrical & Electronics Engineering (UG V) focused on embedded firmware, IoT architecture, robotics, PCB design, and alternative energy systems." />
+  <meta property="og:title" content="RaMaDan | Engineering Portfolio" />
+  <meta property="og:description" content="Building intelligent systems beyond the screen — Embedded Systems, IoT, Robotics & Alternative Energy." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========================================================================
+       TOP NAVIGATION BAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#home" class="brand" aria-label="RaMaDan Engineering Home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="7" y="7" width="10" height="10" rx="1.5" />
+            <path d="M9 7V3M15 7V3M9 21v-4M15 21v-4M7 9H3M7 15H3M21 9h-4M21 15h-4" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>RaMaDan</strong>
+          <small>SYS // EMBEDDED • ENERGY • ROBOTICS</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Primary Navigation">
+        <a href="#home" class="active">Overview</a>
+        <a href="#projects">Systems</a>
+        <a href="#skills">Capabilities</a>
+        <a href="#about">Profile</a>
+        <a href="#experience">Field &amp; Lab</a>
+        <a href="#methodology">Process</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         1. HERO / ENGINEERING OVERVIEW
+         ====================================================================== -->
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="spec-tag">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>HARDWARE • FIRMWARE • CONNECTED ENERGY SYSTEMS</span>
+          </div>
+
+          <h1>
+            Building intelligent systems <span class="accent-gradient">beyond the screen.</span>
+          </h1>
+
+          <p class="hero-lead">
+            I am <strong>RaMaDan</strong> — an Electrical &amp; Electronics Engineering builder focused on
+            <strong>embedded systems, IoT, robotics, and alternative energy</strong>. I design, prototype,
+            and document practical hardware-software systems engineered for real-world needs.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Inspect Systems &amp; Projects</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Initiate Contact</a>
+          </div>
+
+          <!-- Datasheet-style Engineering Spec Matrix -->
+          <div class="spec-matrix" aria-label="Engineering Technical Summary">
+            <div class="spec-cell">
+              <span class="spec-label">CORE DOMAINS</span>
+              <strong>Embedded • IoT • Robotics • Solar</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">MCU &amp; COMMS</span>
+              <strong>ESP32 • STM32 • UART • I²C • LoRa • ESP-NOW</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">SOFTWARE &amp; ECAD</span>
+              <strong>C / C++ • Python • KiCad • Git</strong>
+            </div>
+            <div class="spec-cell">
+              <span class="spec-label">ACADEMIC STAGE</span>
+              <strong>EEE Undergraduate (UG V) • Nigeria</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oscilloscope / Instrument-Framed Lab Portrait -->
+        <div class="instrument-frame">
+          <div class="frame-header">
+            <span>FIG_01 // HARDWARE_LAB</span>
+            <span class="frame-status">● ACTIVE_BUILD</span>
+          </div>
+          <div class="frame-media">
+            <img
+              src="images/hero-photo.jpg"
+              alt="RaMaDan in an electronics lab wearing a black Almuminun Holdings shirt and cap"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');"
+            />
+            <div class="img-fallback">
+              <span>[IMAGE_SLOT: images/hero-photo.jpg]</span>
+              <small>Place your lab portrait at <strong>images/hero-photo.jpg</strong></small>
+            </div>
+          </div>
+          <div class="frame-footer">
+            <span>INNOVATE • BUILD • AUTOMATE</span>
+            <span>LOC: NG</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         2. SYSTEMS & PROJECT PORTFOLIO (WITH BLOCK FLOW + MODAL DIAGRAMS)
+         ====================================================================== -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">01 // Systems &amp; Architecture Portfolio</span>
+            <h2 class="section-title">Hardware concepts, research &amp; platform builds</h2>
+          </div>
+          <p class="section-desc">
+            Each system is documented with its verified maturity stage, signal/power flow,
+            architectural boundaries, and evidence placeholders—never presenting planned work as completed.
+          </p>
+        </div>
+
+        <div class="filter-bar reveal" role="tablist" aria-label="Filter projects by engineering domain">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Systems (4)</button>
+          <button class="filter-btn" data-filter="robotics" role="tab" aria-selected="false">Robotics</button>
+          <button class="filter-btn" data-filter="energy" role="tab" aria-selected="false">Alternative Energy</button>
+          <button class="filter-btn" data-filter="embedded" role="tab" aria-selected="false">Embedded &amp; IoT</button>
+          <button class="filter-btn" data-filter="platform" role="tab" aria-selected="false">Engineering Services</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- PRJ-01: RCEMR -->
+          <article class="project-card reveal" data-categories="robotics embedded">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="doc-id">DOC-01 // RCEMR</span>
+                <span class="status-pill status-concept">Concept / Development Planning</span>
+              </div>
+              <h3>Remote Controlled Environmental Monitoring Rover (RCEMR)</h3>
+              <div class="card-domain">Robotics • Embedded Systems • Environmental Monitoring</div>
+              <p class="card-summary">
+                Modular land-based rover architecture pairing a mobile carrier with a detachable sensor pod.
+                Each unit runs an independent microcontroller, battery, and LoRa link, supported by a Wi-Fi
+                router for remote access and a docked UART bridge.
+              </p>
+
+              <!-- Signal Flow Strip -->
+              <div class="flow-strip" aria-label="Planned system signal flow">
+                <span>Wi-Fi Router</span>
+                <i>⇄</i>
+                <span>Rover MCU</span>
+                <i>⇄ UART / LoRa ⇄</i>
+                <span>Sensor Pod MCU</span>
+              </div>
+
+              <div class="spec-chips">
+                <span class="chip">Dual MCUs</span>
+                <span class="chip">LoRa Radio</span>
+                <span class="chip">UART Dock</span>
+                <span class="chip">Wi-Fi Bridge</span>
+                <span class="chip">Power Mgmt</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="placeholder-tag">[ADD DIAGRAM / REPO]</span>
+              <button class="brief-btn" data-project="rcemr">
+                <span>Open Technical Brief</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRJ-02: P2P Energy -->
+          <article class="project-card reveal" data-categories="energy embedded">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="doc-id">DOC-02 // P2P-MICROGRID</span>
+                <span class="status-pill status-research">Research / Demonstrator Planning</span>
+              </div>
+              <h3>Peer-to-Peer Community Energy Sharing Research</h3>
+              <div class="card-domain">Alternative Energy • Power Systems • IoT</div>
+              <p class="card-summary">
+                Shared solar-and-wind energy routing architecture across connected households using controlled
+                mini-busbars. Nodes transmit state of charge, PV input, and load telemetry to a central
+                control-room node for permission-based surplus export and outage continuity.
+              </p>
+
+              <div class="flow-strip" aria-label="Planned energy and telemetry flow">
+                <span>PV + Wind</span>
+                <i>→</i>
+                <span>Mini-Busbars</span>
+                <i>⇄</i>
+                <span>Seller / Buyer Nodes</span>
+                <i>⇄ ESP-NOW ⇄</i>
+                <span>Control Node</span>
+              </div>
+
+              <div class="boundary-callout">
+                <strong>Demonstrator Boundary:</strong> Low-cost student demonstrator (2 physical nodes, 1
+                software-simulated node, ESP-NOW, low-voltage DC controls + isolated small-scale AC). Not a
+                grid-interconnection product.
+              </div>
+
+              <div class="spec-chips">
+                <span class="chip">ESP-NOW</span>
+                <span class="chip">Mini-Busbars</span>
+                <span class="chip">SoC Telemetry</span>
+                <span class="chip">Isolated AC / LV-DC</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="placeholder-tag">[ADD SCHEMATIC / LOGS]</span>
+              <button class="brief-btn" data-project="p2p">
+                <span>Open Technical Brief</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRJ-03: Personal Safety Wearable -->
+          <article class="project-card reveal" data-categories="embedded">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="doc-id">DOC-03 // SAFETY-NODE</span>
+                <span class="status-pill status-concept">Product Exploration / Architecture Research</span>
+              </div>
+              <h3>Personal Safety Wearable / Connected Safety Device</h3>
+              <div class="card-domain">Embedded Systems • Wearables • IoT</div>
+              <p class="card-summary">
+                Standalone safety wearable concept exploring emergency SOS triggering, GPS location
+                reporting, motion sensing, and haptic alerts—engineered to reduce reliance on a paired
+                smartphone while staying compact, low-power, and affordable.
+              </p>
+
+              <div class="flow-strip" aria-label="Planned wearable architecture flow">
+                <span>SOS + IMU</span>
+                <i>→</i>
+                <span>Low-Power MCU</span>
+                <i>⇄</i>
+                <span>GPS + Cellular</span>
+                <i>→</i>
+                <span>Haptic / Alert</span>
+              </div>
+
+              <div class="spec-chips">
+                <span class="chip">Low-Power MCU</span>
+                <span class="chip">Cellular</span>
+                <span class="chip">GPS</span>
+                <span class="chip">Motion Sensing</span>
+                <span class="chip">Battery Mgmt</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="placeholder-tag">[ADD CONCEPT / TRADE-OFFS]</span>
+              <button class="brief-btn" data-project="wearable">
+                <span>Open Technical Brief</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- PRJ-04: AH TechBridge -->
+          <article class="project-card reveal" data-categories="platform">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="doc-id">DOC-04 // TECHBRIDGE</span>
+                <span class="status-pill status-initiation">Website / Platform Initiation</span>
+              </div>
+              <h3>AH TechBridge — PCB Fabrication &amp; Procurement Platform</h3>
+              <div class="card-domain">Engineering Services • PCB Procurement • Digital Platform</div>
+              <p class="card-summary">
+                Engineering services platform designed to streamline PCB fabrication and electronics
+                procurement starting in Nigeria. Combines digital project intake and Gerber/drill-file
+                integrity checks with human DFM review and supplier coordination.
+              </p>
+
+              <div class="flow-strip" aria-label="Planned platform workflow">
+                <span>Gerber Upload</span>
+                <i>→</i>
+                <span>File Validation</span>
+                <i>→</i>
+                <span>DFM Review</span>
+                <i>→</i>
+                <span>Fab Coordination</span>
+              </div>
+
+              <div class="spec-chips">
+                <span class="chip">Gerber / Drill Checks</span>
+                <span class="chip">DFM Review</span>
+                <span class="chip">Project Records</span>
+                <span class="chip">Nigeria Focus</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="placeholder-tag">[ADD WIREFRAMES / URL]</span>
+              <button class="brief-btn" data-project="techbridge">
+                <span>Open Technical Brief</span>
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         3. TECHNICAL CAPABILITY MATRIX
+         ====================================================================== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">02 // Technical Capability Matrix</span>
+            <h2 class="section-title">Hardware, firmware &amp; engineering tooling</h2>
+          </div>
+          <p class="section-desc">
+            Every skill is classified by verified working stage rather than arbitrary percentages or
+            inflated claims.
+          </p>
+        </div>
+
+        <div class="stage-legend reveal" aria-label="Capability Stage Key">
+          <span class="legend-label">STAGE_KEY //</span>
+          <span class="stage-badge stage-working">Working Knowledge</span>
+          <span class="stage-badge stage-developing">Actively Developing</span>
+          <span class="stage-badge stage-exposure">Hands-on Exposure</span>
+          <span class="stage-badge stage-learning">Currently Learning</span>
+        </div>
+
+        <div class="matrix-grid">
+          <!-- MOD 01 -->
+          <article class="matrix-module reveal">
+            <div class="module-head">
+              <span class="mod-code">MOD_01</span>
+              <h3>Embedded Systems &amp; Electronics</h3>
+            </div>
+            <ul class="module-list">
+              <li>
+                <div class="mod-row">
+                  <strong>Microcontroller-Based Prototyping</strong>
+                  <span class="stage-badge stage-exposure">Hands-on Exposure</span>
+                </div>
+                <p>Hardware/software interfacing, sensor integration, and foundational embedded debugging.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>ESP32 Ecosystem &amp; ESP-NOW</strong>
+                  <span class="stage-badge stage-developing">Actively Developing</span>
+                </div>
+                <p>Wireless device-to-device protocols and connected microcontroller architectures.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>UART, I²C, ADC, DAC, Interrupts &amp; Timers</strong>
+                  <span class="stage-badge stage-developing">Actively Developing</span>
+                </div>
+                <p>Low-level peripheral buses, analog conversion, and deterministic timing concepts.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>Firmware Architecture, Peripheral Drivers &amp; RTOS</strong>
+                  <span class="stage-badge stage-learning">Currently Learning</span>
+                </div>
+                <p>Advancing into structured driver development and real-time embedded design.</p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- MOD 02 -->
+          <article class="matrix-module reveal">
+            <div class="module-head">
+              <span class="mod-code">MOD_02</span>
+              <h3>Programming Languages</h3>
+            </div>
+            <ul class="module-list">
+              <li>
+                <div class="mod-row">
+                  <strong>C &amp; C++</strong>
+                  <span class="stage-badge stage-developing">Actively Developing</span>
+                </div>
+                <p>Primary focus for embedded firmware, memory-aware logic, and hardware-oriented code.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>Python</strong>
+                  <span class="stage-badge stage-working">Working Knowledge</span>
+                </div>
+                <p>Technical scripting, automation, data handling, and rapid experimentation.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>JavaScript</strong>
+                  <span class="stage-badge stage-working">Working Knowledge</span>
+                </div>
+                <p>Control interfaces, web dashboards, and supporting engineering software tools.</p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- MOD 03 -->
+          <article class="matrix-module reveal">
+            <div class="module-head">
+              <span class="mod-code">MOD_03</span>
+              <h3>ECAD, Firmware &amp; Dev Tooling</h3>
+            </div>
+            <ul class="module-list">
+              <li>
+                <div class="mod-row">
+                  <strong>STM32CubeMX</strong>
+                  <span class="stage-badge stage-exposure">Hands-on Exposure</span>
+                </div>
+                <p>Pinout configuration, clock-tree setup, and guided embedded exercises.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>KiCad (Schematic &amp; PCB Layout)</strong>
+                  <span class="stage-badge stage-learning">Currently Learning</span>
+                </div>
+                <p>Introductory schematic capture, footprint assignment, and PCB layout workflows.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>Git &amp; GitHub</strong>
+                  <span class="stage-badge stage-working">Working Knowledge</span>
+                </div>
+                <p>Version control, repository maintenance, and collaborative engineering workflows.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>Serial Monitors, IDEs &amp; Simulation Tools</strong>
+                  <span class="stage-badge stage-working">Working Knowledge</span>
+                </div>
+                <p>UART telemetry inspection, flashing tools, and circuit/code prototyping.</p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- MOD 04 -->
+          <article class="matrix-module reveal">
+            <div class="module-head">
+              <span class="mod-code">MOD_04</span>
+              <h3>Connected Systems &amp; Energy</h3>
+            </div>
+            <ul class="module-list">
+              <li>
+                <div class="mod-row">
+                  <strong>IoT &amp; Remote Monitoring</strong>
+                  <span class="stage-badge stage-developing">Actively Developing</span>
+                </div>
+                <p>Telemetry pipelines, node coordination, and remote system command architectures.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>Solar Installation (SIWES Exposure)</strong>
+                  <span class="stage-badge stage-exposure">Hands-on Exposure</span>
+                </div>
+                <p>Introductory practical field exposure supporting alternative-energy interest.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>CCTV &amp; Security Systems</strong>
+                  <span class="stage-badge stage-exposure">Hands-on Exposure</span>
+                </div>
+                <p>Practical exposure to surveillance hardware and physical security systems.</p>
+              </li>
+              <li>
+                <div class="mod-row">
+                  <strong>Edge Intelligence / Basic AI &amp; ML</strong>
+                  <span class="stage-badge stage-learning">Currently Learning</span>
+                </div>
+                <p>Exploring lightweight edge intelligence where practical for embedded sensing.</p>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         4. ENGINEERING PROFILE, CREDENTIALS & VENTURE DIRECTION
+         ====================================================================== -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">03 // Engineering Profile &amp; Credentials</span>
+            <h2 class="section-title">Curious about how things work. Driven to build what comes next.</h2>
+          </div>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-card reveal">
+            <div class="profile-img-wrap">
+              <img
+                src="images/about-photo.jpg"
+                alt="Portrait of RaMaDan in cream embroidered attire"
+                onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');"
+              />
+              <div class="img-fallback">
+                <span>[IMAGE_SLOT: images/about-photo.jpg]</span>
+                <small>Place your portrait at <strong>images/about-photo.jpg</strong></small>
+              </div>
+            </div>
+            <div class="profile-statement">
+              <span class="statement-tag">CORE IDENTITY</span>
+              <p>
+                An aspiring alternative-energy builder and smart-home innovator, developing the
+                engineering foundation to design useful, affordable, and reliable electronic systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="profile-details reveal">
+            <p class="lead-p">
+              My engineering work is driven by a simple conviction: <strong>technology should do more
+              than exist on a screen</strong> — it should sense, actuate, and solve tangible problems
+              in the physical world.
+            </p>
+            <p>
+              I am building strong capabilities across C/C++, Python, microcontrollers, PCB design,
+              and connected power systems—with particular interest in embedded product development,
+              smart-home automation, environmental monitoring, personal safety hardware, and resilient
+              alternative energy systems.
+            </p>
+
+            <!-- Engineering Credentials Datasheet -->
+            <div class="datasheet-box">
+              <div class="datasheet-header">
+                <span>ACADEMIC CREDENTIALS // EEE</span>
+                <span class="stage-badge stage-developing">Undergraduate Level (UG V)</span>
+              </div>
+              <div class="datasheet-rows">
+                <div class="ds-row">
+                  <span class="ds-key">DISCIPLINE</span>
+                  <span class="ds-val">Electrical &amp; Electronics Engineering <span class="placeholder-tag">[ADD EXACT DEGREE, e.g., B.Eng.]</span></span>
+                </div>
+                <div class="ds-row">
+                  <span class="ds-key">INSTITUTION</span>
+                  <span class="ds-val"><span class="placeholder-tag">[ADD UNIVERSITY / INSTITUTION NAME]</span> — Nigeria</span>
+                </div>
+                <div class="ds-row">
+                  <span class="ds-key">COMPLETION</span>
+                  <span class="ds-val"><span class="placeholder-tag">[ADD EXPECTED GRADUATION DATE]</span></span>
+                </div>
+                <div class="ds-row">
+                  <span class="ds-key">DISTINCTIONS</span>
+                  <span class="ds-val"><span class="placeholder-tag">[ADD VERIFIED HONORS IF ANY]</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Long-Term Venture & Engineering Direction -->
+        <div class="venture-panel reveal">
+          <div class="venture-copy">
+            <span class="eyebrow">Long-Term Engineering &amp; Venture Direction</span>
+            <h3>Practical engineering for Nigerian needs — associated with Almuminun Holdings</h3>
+            <p>
+              Beyond individual prototypes, my long-term goal is to combine deep embedded-systems and
+              electronics engineering capability with product development and ventures that address
+              real infrastructure, energy, and safety needs.
+            </p>
+            <p>
+              This entrepreneurial vision is associated with <strong>Almuminun Holdings</strong>, with an
+              immediate technical focus on <strong>solar and technology</strong>, and longer-term
+              expansion toward agriculture and fashion.
+            </p>
+            <div class="focus-pills">
+              <span>Embedded Firmware</span>
+              <span>PCB Product Design</span>
+              <span>Smart-Home &amp; IoT</span>
+              <span>Autonomous / Remote Robotics</span>
+              <span>Solar &amp; Hybrid Energy</span>
+              <span>Affordable Safety Tech</span>
+            </div>
+          </div>
+
+          <div class="venture-media">
+            <img
+              src="images/vision-photo.jpg"
+              alt="RaMaDan seated in front of the Almuminun Holdings — Building a Smarter Tomorrow sign"
+              onerror="this.style.display='none'; this.nextElementSibling.classList.add('visible');"
+            />
+            <div class="img-fallback">
+              <span>[IMAGE_SLOT: images/vision-photo.jpg]</span>
+              <small>Place your Almuminun Holdings photo at <strong>images/vision-photo.jpg</strong></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         5. FIELD EXPOSURE & TECHNICAL METHODOLOGY
+         ====================================================================== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">04 // Field Exposure &amp; Technical Development</span>
+            <h2 class="section-title">Practical installation exposure &amp; hardware study</h2>
+          </div>
+        </div>
+
+        <div class="exp-grid">
+          <article class="exp-card reveal">
+            <div class="exp-top">
+              <span class="exp-badge">FIELD // SIWES</span>
+              <h3>Solar Installation Exposure</h3>
+            </div>
+            <p>
+              Gained introductory practical exposure to solar power installation during SIWES, grounding
+              ongoing system work in alternative energy and hybrid power design.
+            </p>
+            <div class="exp-placeholders">
+              <span class="placeholder-tag">[ADD SIWES EMPLOYER]</span>
+              <span class="placeholder-tag">[ADD DATES &amp; VERIFIED TASKS]</span>
+            </div>
+          </article>
+
+          <article class="exp-card reveal">
+            <div class="exp-top">
+              <span class="exp-badge">FIELD // SECURITY</span>
+              <h3>CCTV &amp; Security Systems</h3>
+            </div>
+            <p>
+              Practical exposure to CCTV installation workflows, informing ongoing interest in
+              cost-effective security, monitoring, and safety-oriented electronics.
+            </p>
+            <div class="exp-placeholders">
+              <span class="placeholder-tag">[ADD VERIFIED TASKS: e.g., mounting, routing, testing]</span>
+            </div>
+          </article>
+
+          <article class="exp-card reveal">
+            <div class="exp-top">
+              <span class="exp-badge">LAB // SELF-DIRECTED</span>
+              <h3>Embedded &amp; ECAD Progression</h3>
+            </div>
+            <p>
+              Structured study in C/C++, STM32CubeMX microcontroller exercises, and KiCad PCB layout.
+              Current priority: real-hardware firmware practice and peripheral-driver development.
+            </p>
+            <div class="exp-tag-line">C/C++ • STM32CubeMX • KiCad • Peripheral Drivers</div>
+          </article>
+        </div>
+
+        <!-- Engineering Methodology -->
+        <div id="methodology" class="methodology-box reveal">
+          <div class="methodology-head">
+            <div>
+              <span class="eyebrow">05 // Engineering Workflow</span>
+              <h3>Iterative Build &amp; Verification Loop</h3>
+            </div>
+            <p>
+              Every project is structured to generate verifiable technical artifacts: block diagrams,
+              schematics, firmware repos, bench test results, and concise engineering notes.
+            </p>
+          </div>
+
+          <div class="loop-grid">
+            <div class="loop-step">
+              <span class="step-idx">01</span>
+              <h4>First Principles</h4>
+              <p>Analyze electrical constraints, communication protocols, and power budgets before building.</p>
+            </div>
+            <div class="loop-step">
+              <span class="step-idx">02</span>
+              <h4>Minimal Prototype</h4>
+              <p>Assemble a scoped hardware/firmware baseline to validate core system behavior early.</p>
+            </div>
+            <div class="loop-step">
+              <span class="step-idx">03</span>
+              <h4>Bench Test &amp; Debug</h4>
+              <p>Inspect serial telemetry, peripheral timing, and failure modes on physical hardware.</p>
+            </div>
+            <div class="loop-step">
+              <span class="step-idx">04</span>
+              <h4>Document &amp; Refine</h4>
+              <p>Log findings, schematics, and trade-offs to drive the next hardware or firmware revision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         6. CONTACT
+         ====================================================================== -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <span class="eyebrow">06 // Technical Collaboration &amp; Contact</span>
+          <h2 class="section-title">Open to engineering projects, collaboration &amp; dialogue</h2>
+          <p class="section-desc">
+            Interested in embedded systems, IoT hardware, alternative energy prototypes, or technical
+            collaboration? Reach out via any verified channel below.
+          </p>
+
+          <div class="channel-list">
+            <a href="mailto:placeholder.email@example.com" class="channel-item">
+              <div>
+                <span class="ch-label">DIRECT EMAIL</span>
+                <div class="ch-val"><span class="placeholder-tag">[ADD PROFESSIONAL EMAIL]</span></div>
+              </div>
+              <span class="ch-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#contact" class="channel-item">
+              <div>
+                <span class="ch-label">GITHUB REPOSITORIES</span>
+                <div class="ch-val"><span class="placeholder-tag">[ADD GITHUB URL]</span></div>
+              </div>
+              <span class="ch-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a href="#contact" class="channel-item">
+              <div>
+                <span class="ch-label">LINKEDIN PROFILE</span>
+                <div class="ch-val"><span class="placeholder-tag">[ADD LINKEDIN URL]</span></div>
+              </div>
+              <span class="ch-arrow" aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-head">
+            <h3>Send an Engineering Inquiry</h3>
+            <span>DIRECT_DISPATCH</span>
+          </div>
+          <div class="field">
+            <label for="senderName">NAME / ORGANIZATION</label>
+            <input type="text" id="senderName" name="name" placeholder="e.g., Engr. Yusuf Abdullahi" required />
+          </div>
+          <div class="field">
+            <label for="senderEmail">RETURN EMAIL</label>
+            <input type="email" id="senderEmail" name="email" placeholder="name@organization.com" required />
+          </div>
+          <div class="field">
+            <label for="senderMessage">MESSAGE / PROJECT SCOPE</label>
+            <textarea id="senderMessage" name="message" rows="4" placeholder="Share project details, technical questions, or collaboration ideas..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Prepare Message →</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+          <p class="form-note">
+            Configure your email address in <code>js/script.js</code> (or connect a Formspree endpoint)
+            and test before deploying publicly.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><strong>RaMaDan</strong> // Embedded Systems • IoT • Robotics • Alternative Energy</div>
+      <div>Verified Scope &amp; Transparent Engineering Portfolio • <span id="yearSpan"></span></div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       TECHNICAL BRIEF & SVG ARCHITECTURE MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <div class="modal-head">
+        <div>
+          <span class="status-pill" id="modalStatus">Status</span>
+          <h3 id="modalTitle">System Title</h3>
+          <div id="modalCategory" class="modal-cat"></div>
+        </div>
+        <button class="modal-close" id="modalClose" aria-label="Close technical brief">✕</button>
+      </div>
+
+      <div class="modal-block">
+        <h4>01 // System Block Diagram (Conceptual Architecture)</h4>
+        <div class="diagram-canvas" id="modalDiagram"></div>
+      </div>
+
+      <div class="modal-block">
+        <h4>02 // System Overview</h4>
+        <p id="modalOverview"></p>
+      </div>
+
+      <div class="modal-block">
+        <h4>03 // Architecture &amp; Technical Focus</h4>
+        <ul class="modal-list" id="modalHighlights"></ul>
+      </div>
+
+      <div class="modal-block" id="modalBoundaryWrap">
+        <h4>04 // Explicit Scope &amp; Prototype Boundary</h4>
+        <p id="modalBoundary" class="boundary-callout"></p>
+      </div>
+
+      <div class="modal-block">
+        <h4>05 // Required Artifacts Before Publishing</h4>
+        <p id="modalEvidence" class="placeholder-tag"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
